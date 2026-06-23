@@ -1,37 +1,187 @@
-<!DOCTYPE html>
+
+
+</body>
+</html><!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMAXCEL & LAZOR Official Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #58a6ff;
-            font-size: 3rem;
-        }
-        p {
-            font-size: 1.2rem;
-        }
-        .container {
-            border: 1px solid #30363d;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #161b22;
-            display: inline-block;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMAXCEL | LAZOR</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+}
+
+header{
+background:#000;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#1e90ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero p{
+font-size:22px;
+margin-top:15px;
+}
+
+.btn{
+margin-top:20px;
+padding:12px 25px;
+background:#1e90ff;
+border:none;
+color:white;
+cursor:pointer;
+font-size:18px;
+}
+
+section{
+padding:80px 10%;
+}
+
+.card{
+background:#151515;
+padding:25px;
+border-radius:12px;
+margin-top:20px;
+}
+
+.contact{
+background:#111;
+text-align:center;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+background:#222;
+border:none;
+color:white;
+}
+
+button{
+padding:12px 25px;
+background:#1e90ff;
+border:none;
+color:white;
+margin-top:15px;
+cursor:pointer;
+}
+
+footer{
+padding:20px;
+text-align:center;
+background:#000;
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>IMAXCEL & LAZOR</h1>
-        <p>Official Website Coming Soon</p>
-    </div>
+
+<header>
+<div class="logo">IMAXCEL</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#lazor">Lazor</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>IMAXCEL</h1>
+<p>Innovating Beyond Limits</p>
+<button class="btn">Discover More</button>
+</section>
+
+<section id="about">
+<h2>About IMAXCEL</h2>
+
+<div class="card">
+<p>
+IMAXCEL is a future innovation company founded by Joshua N.Hapption
+Our vision is to build world-class technology,
+automotive solutions and creative projects that inspire people globally.
+</p>
+</div>
+</section>
+
+<section id="lazor">
+<h2>LAZOR</h2>
+
+<div class="card">
+<h3>Future Vehicle Brand</h3>
+
+<p>
+LAZOR is an automotive brand under IMAXCEL.
+Our mission is to create modern vehicles that combine
+performance, luxury and advanced technology.
+</p>
+
+<br>
+
+<h3>Motto</h3>
+<p>Speed • Power • Future</p>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+</form>
+
+</section>
+
+<footer>
+© 2026/2035 IMAXCEL | All Rights Reserved
+</footer>
+
 </body>
 </html>
