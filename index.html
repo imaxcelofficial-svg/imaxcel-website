@@ -3,31 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IMAXCEL | LAZOR - LAZOR Concept Car</title>
+<title>IMAXCEL | LAZOR Concept Car</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Arial',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#0b0b0b;
-color:white;
+background:#0a0a0a;
+color:#fff;
 }
 
 header{
-background:#000;
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.9);
+backdrop-filter:blur(10px);
 padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:fixed;
-width:100%;
-top:0;
 z-index:1000;
 border-bottom:1px solid #1e90ff33;
 }
@@ -40,7 +41,7 @@ letter-spacing:2px;
 }
 
 nav a{
-color:white;
+color:#fff;
 text-decoration:none;
 margin-left:30px;
 font-size:16px;
@@ -53,47 +54,48 @@ color:#1e90ff;
 
 .hero{
 height:100vh;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),url('car1.jpg');
+background-size:cover;
+background-position:center;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url('car1.jpg');
-background-size:cover;
-background-position:center;
 padding-top:80px;
 }
 
 .hero h1{
-font-size:70px;
+font-size:80px;
 color:#1e90ff;
-text-shadow:0 0 30px #1e90ff88;
-margin-bottom:10px;
+text-shadow:0 0 40px #1e90ffaa;
+margin-bottom:20px;
+letter-spacing:3px;
 }
 
 .hero p{
-font-size:22px;
+font-size:24px;
 color:#ccc;
 margin-bottom:30px;
 }
 
 .btn{
-padding:15px 35px;
+padding:15px 40px;
 background:linear-gradient(90deg,#1e90ff,#0066cc);
 border:none;
-color:white;
-cursor:pointer;
+border-radius:50px;
+color:#fff;
 font-size:18px;
 font-weight:bold;
-border-radius:50px;
-transition:0.3s;
+cursor:pointer;
 text-decoration:none;
 display:inline-block;
+transition:0.3s;
 }
 
 .btn:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 30px #1e90ff66;
+box-shadow:0 10px 30px #1e90ff88;
 }
 
 section{
@@ -101,7 +103,7 @@ padding:100px 10%;
 }
 
 h2{
-font-size:45px;
+font-size:48px;
 text-align:center;
 margin-bottom:50px;
 color:#1e90ff;
@@ -109,43 +111,51 @@ color:#1e90ff;
 
 .card{
 background:#151515;
-padding:25px;
-border-radius:12px;
 border:1px solid #222;
+border-radius:15px;
+padding:25px;
 transition:0.3s;
 }
 
 .card:hover{
-border:1px solid #1e90ff;
+border-color:#1e90ff;
 transform:translateY(-5px);
 }
 
 .card img{
 width:100%;
-height:280px;
+height:300px;
 object-fit:cover;
-border-radius:8px;
-margin-bottom:15px;
+border-radius:10px;
+margin-bottom:20px;
 background:#0a0a0a;
 }
 
 .card h3{
 color:#1e90ff;
-font-size:22px;
-margin-bottom:8px;
+font-size:24px;
+margin-bottom:10px;
 }
 
 .card p{
 color:#aaa;
-font-size:15px;
 line-height:1.6;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-margin-top:40px;
+gap:30px;
+margin-top:50px;
+}
+
+.about-text{
+max-width:800px;
+margin:0 auto;
+text-align:center;
+font-size:18px;
+line-height:1.8;
+color:#ccc;
 }
 
 .contact{
@@ -155,53 +165,29 @@ text-align:center;
 
 .email-box{
 background:#151515;
-padding:40px;
-border-radius:15px;
-border:1px solid #1e90ff44;
+border:2px solid #1e90ff44;
+border-radius:20px;
+padding:50px;
 max-width:600px;
 margin:0 auto;
 }
 
 .email-box h3{
 color:#1e90ff;
-font-size:26px;
+font-size:30px;
 margin-bottom:15px;
 }
 
-.email-box p{
-color:#ccc;
-font-size:16px;
-margin-bottom:25px;
-}
-
 footer{
-padding:25px;
-text-align:center;
 background:#000;
+padding:30px;
+text-align:center;
 border-top:1px solid #1e90ff33;
-color:#777;
-font-size:14px;
-}
-
-.watermark{
-position:absolute;
-bottom:15px;
-right:15px;
-background:rgba(0,0,0,0.8);
-color:#1e90ff;
-padding:6px 12px;
-border-radius:6px;
-font-size:12px;
-font-weight:bold;
-border:1px solid #1e90ff44;
-}
-
-.car-shot{
-position:relative;
+color:#666;
 }
 
 @media(max-width:768px){
-.hero h1{font-size:40px;}
+.hero h1{font-size:45px;}
 nav a{margin-left:15px;font-size:14px;}
 section{padding:60px 5%;}
 </style>
@@ -219,115 +205,83 @@ section{padding:60px 5%;}
 </header>
 
 <section class="hero">
-<h1>LAZOR Concept</h1>
+<h1>LAZOR CONCEPT</h1>
 <p>Designed by Joshua N. Hapption • IMAXCEL Future Automotive</p>
-<a href="#gallery" class="btn">View My Design</a>
+<a href="#gallery" class="btn">View LAZOR Design</a>
 </section>
 
 <section id="about">
 <h2>About LAZOR</h2>
-<div class="card">
-<p>
-<b>LAZOR</b> is my original concept car design under <b>IMAXCEL Future Automotive</b>. 
-Every curve, line, and detail you see here was sketched and designed by me, Joshua N. Hapption.
+<div class="about-text">
+<b>LAZOR</b> is my original concept car under <b>IMAXCEL Future Automotive</b>. 
+Every curve, every line, every "Z" logo you see was designed and sketched by me.
 <br><br>
-This concept represents Speed • Power • Future. The "Z" logo on the wheels, "LAZOR" branding on the body, 
-and aggressive aerodynamic shape are all part of my vision for the next generation of electric hypercars.
+This concept represents the future: Speed • Power • Electric Performance. 
+The LAZOR branding and aerodynamic design show my vision for next-gen hypercars.
 <br><br>
-<b>100% Original Artwork. Copyright IMAXCEL 2026.</b>
-</p>
+<b>100% Original Artwork • Copyright IMAXCEL 2026</b>
 </div>
 </section>
 
 <section id="gallery">
 <h2>LAZOR Concept Gallery</h2>
-<p style="text-align:center;color:#aaa;margin-bottom:30px">All designs and sketches by Joshua N. Hapption</p>
+<p style="text-align:center;color:#888;margin-bottom:20px">All images feature IMAXCEL watermark + LAZOR branding</p>
 
 <div class="gallery">
 
-<div class="car-shot card">
-<img src="car1.jpg" alt="LAZOR Top View">
-<div class="watermark">IMAXCEL | LAZOR</div>
-<h3>LAZOR SP40 - Top View</h3>
-<p>Full top view showing aerodynamic roofline and LAZOR branding placement.</p>
-</div>
-
-<div class="car-shot card">
-<img src="car2.jpg" alt="LAZOR Side View">
-<div class="watermark">IMAXCEL | LAZOR</div>
-<h3>Side Profile Concept</h3>
-<p>Sleek side silhouette with sharp character lines and futuristic stance.</p>
-</div>
-
-<div class="car-shot card">
-<img src="car3.jpg" alt="LAZOR Front 3/4">
-<div class="watermark">IMAXCEL | LAZOR</div>
+<div class="card">
+<img src="car1.jpg" alt="LAZOR Front 3/4">
 <h3>Front 3/4 Angle</h3>
-<p>Aggressive front fascia concept with sharp LED signature design.</p>
+<p>Aggressive front fascia concept with LAZOR branding and Z-logo wheels. Hero shot for IMAXCEL.</p>
 </div>
 
-<div class="car-shot card">
-<img src="car4.jpg" alt="LAZOR Rear View">
-<div class="watermark">IMAXCEL | LAZOR</div>
-<h3>Rear Design Concept</h3>
-<p>Wide rear stance with integrated spoiler and LAZOR badging concept.</p>
+<div class="card">
+<img src="car2.jpg" alt="LAZOR Front View">
+<h3>Front View</h3>
+<p>Straight front concept showing LAZOR lettering placement and sharp LED design signature.</p>
 </div>
 
-<div class="car-shot card">
-<img src="car5.jpg" alt="LAZOR Wheel Design">
-<div class="watermark">IMAXCEL | LAZOR</div>
-<h3>Z-LOGO Wheels</h3>
-<p>Custom wheel design featuring the "Z" logo - signature of LAZOR brand.</p>
+<div class="card">
+<img src="car3.jpg" alt="LAZOR Top Blue">
+<h3>Top View - Blue Concept</h3>
+<p>Top down view with blue LAZOR branding. Shows aerodynamic roofline and body proportions.</p>
 </div>
 
-<div class="car-shot card">
-<img src="car6.jpg" alt="LAZOR Front Detail">
-<div class="watermark">IMAXCEL | LAZOR</div>
-<h3>Front Detail Study</h3>
-<p>Close-up concept of front bumper, vents, and LAZOR lettering design.</p>
+<div class="card">
+<img src="car4.jpg" alt="LAZOR Top Sketch">
+<h3>Top View Sketch</h3>
+<p>Clean sketch style top view. Technical concept showing body lines and dimensions.</p>
 </div>
 
-<div class="car-shot card">
-<img src="car7.jpg" alt="LAZOR Side Sketch">
-<div class="watermark">IMAXCEL | LAZOR</div>
-<h3>Side Sketch Study</h3>
-<p>Hand sketch showing proportions and body line flow concept.</p>
-</div>
-
-<div class="car-shot card">
-<img src="car8.jpg" alt="LAZOR Rear Sketch">
-<div class="watermark">IMAXCEL | LAZOR</div>
-<h3>Rear Sketch Study</h3>
-<p>Rear quarter concept sketch with spoiler and taillight design ideas.</p>
-</div>
-
-<div class="car-shot card">
-<img src="car9.jpg" alt="LAZOR Concept Art">
-<div class="watermark">IMAXCEL | LAZOR</div>
-<h3>Full Concept Art</h3>
-<p>Master concept sketch showing the complete LAZOR vision.</p>
+<div class="card">
+<img src="car5.jpg" alt="LAZOR Pencil Sketch">
+<h3>Pencil Concept Art</h3>
+<p>Hand-drawn pencil style concept. The original idea that started LAZOR by IMAXCEL.</p>
 </div>
 
 </div>
 
-<div style="text-align:center;margin-top:50px">
-<a href="mailto:imaxcelofficial@gmail.com?subject=LAZOR Concept Inquiry" class="btn">Inquire About LAZOR</a>
+<div style="text-align:center;margin-top:60px">
+<a href="mailto:imaxcelofficial@gmail.com?subject=LAZOR Concept Inquiry" class="btn">Contact Designer</a>
 </div>
 </section>
 
 <section id="contact" class="contact">
-<h2>Contact The Designer</h2>
+<h2>Contact IMAXCEL</h2>
 <div class="email-box">
 <h3>Joshua N. Hapption</h3>
-<p>Founder & Lead Designer - IMAXCEL Future Automotive</p>
-<a href="mailto:imaxcelofficial@gmail.com?subject=Business Inquiry - LAZOR" class="btn">imaxcelofficial@gmail.com</a>
-<p style="margin-top:20px;font-size:13px;color:#666">For licensing, partnerships, or design inquiries only</p>
+<p style="color:#ccc;font-size:16px;margin-bottom:25px">
+Founder & Lead Designer<br>
+IMAXCEL Future Automotive
+</p>
+<a href="mailto:imaxcelofficial@gmail.com?subject=Business Inquiry - LAZOR Concept" class="btn">imaxcelofficial@gmail.com</a>
+<p style="margin-top:20px;font-size:13px;color:#555">For licensing, partnerships & design inquiries</p>
 </div>
 </section>
 
 <footer>
-© 2026/2035 IMAXCEL Future Automotive. LAZOR Concept by Joshua N. Hapption. All Rights Reserved.<br>
-All designs, sketches, and concepts are original artwork and intellectual property of IMAXCEL.
+© 2026 IMAXCEL Future Automotive. LAZOR Concept by Joshua N. Hapption.<br>
+All designs, images, and concepts are original intellectual property of IMAXCEL. All Rights Reserved.
 </footer>
 
 </body>
