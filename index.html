@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IMAXCEL | LAZOR - Luxury Automotive</title>
+<title>IMAXCEL | LAZOR - My Own Car Concept</title>
 
 <style>
 *{
@@ -58,8 +59,8 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+url('attachment://0');
 background-size:cover;
 background-position:center;
 padding-top:80px;
@@ -87,14 +88,13 @@ cursor:pointer;
 font-size:18px;
 font-weight:bold;
 border-radius:50px;
-transition:transform 0.3s, box-shadow 0.3s;
+transition:transform 0.3s;
 text-decoration:none;
 display:inline-block;
 }
 
 .btn:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 30px #1e90ff66;
 }
 
 section{
@@ -116,78 +116,67 @@ margin-top:20px;
 border:1px solid #222;
 }
 
-.car-grid{
+/* YOUR CAR GALLERY WITH WATERMARK */
+.car-gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
 margin-top:40px;
 }
 
-.car-card{
+.car-shot{
 background:#151515;
 border-radius:15px;
 overflow:hidden;
 border:1px solid #222;
-transition:transform 0.3s;
+transition:transform 0.3s, border 0.3s;
+position:relative;
 }
 
-.car-card:hover{
-transform:scale(1.03);
+.car-shot:hover{
+transform:scale(1.02);
 border:1px solid #1e90ff;
 }
 
-.car-img{
+.car-shot img{
 width:100%;
-height:220px;
+height:280px;
 object-fit:cover;
-}
-
-.car-info{
-padding:25px;
-}
-
-.car-info h3{
-color:#1e90ff;
-font-size:24px;
-margin-bottom:10px;
-}
-
-.price{
-color:#ffd700;
-font-size:20px;
-font-weight:bold;
-margin:15px 0;
-}
-
-.specs{
-font-size:14px;
-color:#aaa;
-line-height:1.8;
-margin:15px 0;
-}
-
-.order-btn{
-width:100%;
-padding:12px;
-background:#D44638;
-border:none;
-color:white;
-cursor:pointer;
-border-radius:8px;
-font-weight:bold;
-margin-top:10px;
-transition:background 0.3s;
-text-decoration:none;
+background:#0a0a0a;
 display:block;
+}
+
+/* WATERMARK STYLE */
+.watermark{
+position:absolute;
+bottom:15px;
+right:15px;
+background:rgba(0,0,0,0.7);
+color:#1e90ff;
+padding:8px 15px;
+border-radius:8px;
+font-size:13px;
+font-weight:bold;
+letter-spacing:1px;
+border:1px solid #1e90ff66;
+backdrop-filter:blur(5px);
+}
+
+.car-label{
+padding:15px;
 text-align:center;
+color:#aaa;
+font-size:14px;
 }
 
-.order-btn:hover{
-background:#B23121;
+.car-label b{
+color:#1e90ff;
+font-size:16px;
 }
 
-.sp40{
+.sp40-card{
 border:2px solid #1e90ff;
+background:linear-gradient(135deg,#151515 0%,#0b0b0b 100%);
 }
 
 .contact{
@@ -226,122 +215,137 @@ color:#777;
 <div class="logo">IMAXCEL</div>
 <nav>
 <a href="#about">About</a>
-<a href="#lazor">Cars</a>
+<a href="#cars">My Cars</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>IMAXCEL</h1>
-<p>Innovating Beyond Limits</p>
-<button class="btn" onclick="document.getElementById('lazor').scrollIntoView()">Discover More</button>
+<h1>LAZOR by IMAXCEL</h1>
+<p>My Own Concept • Sleek • Future • Speed • Power</p>
+<button class="btn" onclick="document.getElementById('cars').scrollIntoView()">View My Artwork</button>
 </section>
 
 <section id="about">
-<h2>About IMAXCEL</h2>
+<h2>About LAZOR Concept</h2>
 <div class="card">
 <p>
-IMAXCEL is a future innovation company founded by Joshua N.Hapption. 
-Our vision is to build world-class technology, automotive solutions and creative projects that inspire people globally.
+LAZOR is my own car brand under IMAXCEL, designed and sketched by Joshua N.Hapption. 
+Every curve, every line, every "Z" logo on the wheels is 100% my original artwork.
 </p>
 <br>
-<p>We combine luxury, performance, and advanced technology to create vehicles worth billions. Every LAZOR car is engineered for Speed • Power • Future.</p>
+<p>This concept car combines sleek aerodynamics, aggressive stance, and futuristic design. Built for Speed • Power • Future. Worth $1 Billion Vision.</p>
 </div>
 </section>
 
-<section id="lazor">
-<h2>LAZOR Vehicle Lineup</h2>
-<p style="text-align:center;color:#aaa;margin-bottom:20px">Built by IMAXCEL Luxury Companies</p>
+<section id="cars">
+<h2>LAZOR Concept Gallery</h2>
+<p style="text-align:center;color:#aaa;margin-bottom:30px">My Original Car Designs - Protected by IMAXCEL Watermark</p>
 
-<div class="car-grid">
+<div class="car-gallery">
 
-<div class="car-card sp40" id="sp40">
-<img class="car-img" src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8" alt="SP40">
-<div class="car-info">
-<h3>LAZOR SP40</h3>
-<p style="color:#ffd700;font-size:14px">Flagship Concept • Worth $1 Billion</p>
-<p class="price">Price: On Request</p>
-<div class="specs">
-<b>Exterior:</b> Carbon fiber body, Laser LED headlights, Gull-wing doors<br>
-<b>Interior:</b> Hand-stitched Italian leather, 8K holographic dashboard, AI co-pilot<br>
-<b>Performance:</b> 0-100km/h in 1.8s, 1200HP electric motor, 800km range
-</div>
-<a class="order-btn" href="mailto:imaxcelofficial@gmail.com?subject=Order Request: LAZOR SP40 VIP&body=Hello IMAXCEL Team,%0D%0A%0D%0AI am interested in ordering the LAZOR SP40 VIP Flagship Concept.%0D%0A%0D%0AName: %0D%0APhone: %0D%0ACountry: %0D%0A%0D%0APlease send me VIP details and pricing.">Order SP40 via Email</a>
+<div class="car-shot sp40-card">
+<img src="attachment://0" alt="LAZOR SP40 Top View">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<div class="car-label">
+<b>LAZOR SP40 Concept</b><br>
+Top view with LAZOR branding + Z wheels
 </div>
 </div>
 
-<div class="car-card">
-<img class="car-img" src="https://images.unsplash.com/photo-1542362567-b07e54358753" alt="X7 SUV">
-<div class="car-info">
-<h3>LAZOR X7 SUV</h3>
-<p class="price">From $180,000</p>
-<div class="specs">
-<b>Type:</b> Luxury Electric SUV • 7 Seats<br>
-<b>Range:</b> 650km • 600HP AWD<br>
-<b>Features:</b> Panoramic roof, Night vision
-</div>
-<a class="order-btn" href="mailto:imaxcelofficial@gmail.com?subject=Order Request: LAZOR X7 SUV&body=Hello IMAXCEL Team,%0D%0A%0D%0AI want to order the LAZOR X7 SUV.%0D%0A%0D%0AName: %0D%0APhone: %0D%0ACountry: ">Order X7 via Email</a>
+<div class="car-shot">
+<img src="attachment://1" alt="LAZOR Side View">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<div class="car-label">
+<b>Side Profile</b><br>
+Sleek curves + aerodynamic lines
 </div>
 </div>
 
-<div class="car-card">
-<img class="car-img" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" alt="S1 Sedan">
-<div class="car-info">
-<h3>LAZOR S1 Sedan</h3>
-<p class="price">From $120,000</p>
-<div class="specs">
-<b>Type:</b> Executive Electric Sedan<br>
-<b>Range:</b> 700km • 500HP<br>
-<b>Features:</b> Massage seats, Starlight ceiling
-</div>
-<a class="order-btn" href="mailto:imaxcelofficial@gmail.com?subject=Order Request: LAZOR S1 Sedan&body=Hello IMAXCEL Team,%0D%0A%0D%0AI want to order the LAZOR S1 Sedan.%0D%0A%0D%0AName: %0D%0APhone: %0D%0ACountry: ">Order S1 via Email</a>
+<div class="car-shot">
+<img src="attachment://2" alt="LAZOR Concept Front">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<div class="car-label">
+<b>Front Concept</b><br>
+Z logo wheel + Concept text
 </div>
 </div>
 
-<div class="car-card">
-<img class="car-img" src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7" alt="T-Rex">
-<div class="car-info">
-<h3>LAZOR T-Rex Off-Road</h3>
-<p class="price">From $220,000</p>
-<div class="specs">
-<b>Type:</b> Electric Off-Road Beast<br>
-<b>Power:</b> 1000HP • 4x4 Tank Mode<br>
-<b>Features:</b> 1m water wading, Military armor
-</div>
-<a class="order-btn" href="mailto:imaxcelofficial@gmail.com?subject=Order Request: LAZOR T-Rex&body=Hello IMAXCEL Team,%0D%0A%0D%0AI want to order the LAZOR T-Rex Off-Road.%0D%0A%0D%0AName: %0D%0APhone: %0D%0ACountry: ">Order T-Rex via Email</a>
+<div class="car-shot">
+<img src="attachment://3" alt="LAZOR Front Detail">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<div class="car-label">
+<b>Front Detail</b><br>
+Concept badge + headlight design
 </div>
 </div>
 
-<div class="car-card">
-<img class="car-img" src="https://images.unsplash.com/photo-1618843477313-d8fe217a6d57" alt="Z3">
-<div class="car-info">
-<h3>LAZOR Z3 Hatchback</h3>
-<p class="price">From $85,000</p>
-<div class="specs">
-<b>Type:</b> Compact Luxury Hatchback<br>
-<b>Range:</b> 500km • 350HP<br>
-<b>Features:</b> Drone docking, AR windshield
+<div class="car-shot">
+<img src="attachment://4" alt="LAZOR Full Side">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<div class="car-label">
+<b>Full Side View</b><br>
+Complete LAZOR Concept silhouette
 </div>
-<a class="order-btn" href="mailto:imaxcelofficial@gmail.com?subject=Order Request: LAZOR Z3&body=Hello IMAXCEL Team,%0D%0A%0D%0AI want to order the LAZOR Z3 Hatchback.%0D%0A%0D%0AName: %0D%0APhone: %0D%0ACountry: ">Order Z3 via Email</a>
+</div>
+
+<div class="car-shot">
+<img src="attachment://5" alt="LAZOR Rear">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<div class="car-label">
+<b>Rear Design</b><br>
+Z wheel logo + rear curves
+</div>
+</div>
+
+<div class="car-shot">
+<img src="attachment://6" alt="LAZOR Wheel Detail">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<div class="car-label">
+<b>Wheel Detail</b><br>
+Custom Z logo rim design
+</div>
+</div>
+
+<div class="car-shot">
+<img src="attachment://7" alt="LAZOR Rear Angle">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<div class="car-label">
+<b>Rear Angle</b><br>
+Sharp rear + Z styling
+</div>
+</div>
+
+<div class="car-shot">
+<img src="attachment://8" alt="LAZOR Front 3/4">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<div class="car-label">
+<b>Front 3/4 View</b><br>
+Aggressive front + vents
 </div>
 </div>
 
 </div>
+
+<div style="text-align:center;margin-top:50px">
+<a class="btn" href="mailto:imaxcelofficial@gmail.com?subject=LAZOR Concept Inquiry&body=Hello Joshua,%0D%0A%0D%0AI saw your LAZOR Concept artwork. I want to discuss this design.%0D%0A%0D%0AName: %0D%0ACountry: ">Order Concept via Email</a>
+</div>
+
 </section>
 
 <section class="contact" id="contact">
-<h2>Contact IMAXCEL</h2>
+<h2>Contact The Designer</h2>
 <div class="email-box">
-<h3>Email Us Directly</h3>
-<p style="color:#aaa;margin-bottom:25px">Send your inquiry to Joshua N.Hapption and the IMAXCEL team</p>
-<a class="btn" href="mailto:imaxcelofficial@gmail.com?subject=General Inquiry - IMAXCEL LAZOR&body=Hello Joshua,%0D%0A%0D%0AMy name is:%0D%0AMy inquiry is:">imaxcelofficial@gmail.com</a>
-<p style="margin-top:20px;font-size:14px;color:#666">Click the button above. Your Gmail/Email app will open automatically</p>
+<h3>Joshua N.Hapption</h3>
+<p style="color:#aaa;margin-bottom:25px">Founder & Designer of LAZOR Concept Cars</p>
+<a class="btn" href="mailto:imaxcelofficial@gmail.com?subject=LAZOR Concept - Business Inquiry&body=Hello Joshua,%0D%0A%0D%0AMy name is:%0D%0ACompany: %0D%0AInquiry: ">imaxcelofficial@gmail.com</a>
+<p style="margin-top:20px;font-size:14px;color:#666">All designs copyright IMAXCEL 2026. Protected by watermark.</p>
 </div>
 </section>
 
 <footer>
-© 2026/2035 IMAXCEL | LAZOR Luxury Automotive | Founded by Joshua N.Hapption<br>
-Lagos, Nigeria | Contact: imaxcelofficial@gmail.com | All Rights Reserved
+© 2026/2035 IMAXCEL | LAZOR Concept Cars | Designed by Joshua N.Hapption<br>
+Lagos, Nigeria | All Artwork & Designs Owned by IMAXCEL | All Rights Reserved
 </footer>
 
 </body>
