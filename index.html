@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IMAXCEL | LAZOR</title>
+<title>IMAXCEL | LAZOR - LAZOR Concept Car</title>
 
 <style>
 *{
@@ -12,6 +11,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -21,65 +21,131 @@ color:white;
 
 header{
 background:#000;
-padding:20px;
+padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+border-bottom:1px solid #1e90ff33;
 }
 
 .logo{
-font-size:32px;
+font-size:28px;
 font-weight:bold;
 color:#1e90ff;
+letter-spacing:2px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:30px;
+font-size:16px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#1e90ff;
 }
 
 .hero{
-height:90vh;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url('car1.jpg');
 background-size:cover;
 background-position:center;
+padding-top:80px;
 }
 
 .hero h1{
-font-size:60px;
+font-size:70px;
+color:#1e90ff;
+text-shadow:0 0 30px #1e90ff88;
+margin-bottom:10px;
 }
 
 .hero p{
 font-size:22px;
-margin-top:15px;
+color:#ccc;
+margin-bottom:30px;
 }
 
 .btn{
-margin-top:20px;
-padding:12px 25px;
-background:#1e90ff;
+padding:15px 35px;
+background:linear-gradient(90deg,#1e90ff,#0066cc);
 border:none;
 color:white;
 cursor:pointer;
 font-size:18px;
+font-weight:bold;
+border-radius:50px;
+transition:0.3s;
+text-decoration:none;
+display:inline-block;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px #1e90ff66;
 }
 
 section{
-padding:80px 10%;
+padding:100px 10%;
+}
+
+h2{
+font-size:45px;
+text-align:center;
+margin-bottom:50px;
+color:#1e90ff;
 }
 
 .card{
 background:#151515;
 padding:25px;
 border-radius:12px;
-margin-top:20px;
+border:1px solid #222;
+transition:0.3s;
+}
+
+.card:hover{
+border:1px solid #1e90ff;
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:15px;
+background:#0a0a0a;
+}
+
+.card h3{
+color:#1e90ff;
+font-size:22px;
+margin-bottom:8px;
+}
+
+.card p{
+color:#aaa;
+font-size:15px;
+line-height:1.6;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
 .contact{
@@ -87,212 +153,57 @@ background:#111;
 text-align:center;
 }
 
-input,textarea{
-width:100%;
-padding:12px;
-margin-top:10px;
-background:#222;
-border:none;
-color:white;
-}
-
-button{
-padding:12px 25px;
-background:#1e90ff;
-border:none;
-color:white;
-margin-top:15px;
-cursor:pointer;
-}
-
-footer{
-padding:20px;
-text-align:center;
-background:#000;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="logo">IMAXCEL</div>
-
-<nav>
-<a href="#about">About</a>
-<a href="#lazor">Lazor</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-
-<section class="hero">
-<h1>IMAXCEL</h1>
-<p>Innovating Beyond Limits</p>
-<button class="btn">Discover More</button>
-</section>
-
-<section id="about">
-<h2>About IMAXCEL</h2>
-
-<div class="card">
-<p>
-IMAXCEL is a future innovation company founded by Joshua N.
-Our vision is to build world-class technology,
-automotive solutions and creative projects that inspire people globally.
-</p>
-</div>
-</section>
-
-<section id="lazor">
-<h2>LAZOR</h2>
-
-<div class="card">
-<h3>Future Vehicle Brand</h3>
-
-<p>
-LAZOR is an automotive brand under IMAXCEL.
-Our mission is to create modern vehicles that combine
-performance, luxury and advanced technology.
-</p>
-
-<br>
-
-<h3>Motto</h3>
-<p>Speed • Power • Future</p>
-</div>
-</section>
-
-<section class="contact" id="contact">
-<h2>Contact Us</h2>
-
-<form>
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Your Email">
-
-<textarea rows="5" placeholder="Your Message"></textarea>
-
-<button type="submit">Send Message</button>
-</form>
-
-</section>
-
-<footer>
-© 2026 IMAXCEL | All Rights Reserved
-</footer>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IMAXCEL | LAZOR</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#0b0b0b;
-color:white;
-}
-
-header{
-background:#000;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:32px;
-font-weight:bold;
-color:#1e90ff;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-}
-
-.hero{
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
-background-size:cover;
-background-position:center;
-}
-
-.hero h1{
-font-size:60px;
-}
-
-.hero p{
-font-size:22px;
-margin-top:15px;
-}
-
-.btn{
-margin-top:20px;
-padding:12px 25px;
-background:#1e90ff;
-border:none;
-color:white;
-cursor:pointer;
-font-size:18px;
-}
-
-section{
-padding:80px 10%;
-}
-
-.card{
+.email-box{
 background:#151515;
-padding:25px;
-border-radius:12px;
-margin-top:20px;
+padding:40px;
+border-radius:15px;
+border:1px solid #1e90ff44;
+max-width:600px;
+margin:0 auto;
 }
 
-.contact{
-background:#111;
-text-align:center;
+.email-box h3{
+color:#1e90ff;
+font-size:26px;
+margin-bottom:15px;
 }
 
-input,textarea{
-width:100%;
-padding:12px;
-margin-top:10px;
-background:#222;
-border:none;
-color:white;
-}
-
-button{
-padding:12px 25px;
-background:#1e90ff;
-border:none;
-color:white;
-margin-top:15px;
-cursor:pointer;
+.email-box p{
+color:#ccc;
+font-size:16px;
+margin-bottom:25px;
 }
 
 footer{
-padding:20px;
+padding:25px;
 text-align:center;
 background:#000;
+border-top:1px solid #1e90ff33;
+color:#777;
+font-size:14px;
 }
+
+.watermark{
+position:absolute;
+bottom:15px;
+right:15px;
+background:rgba(0,0,0,0.8);
+color:#1e90ff;
+padding:6px 12px;
+border-radius:6px;
+font-size:12px;
+font-weight:bold;
+border:1px solid #1e90ff44;
+}
+
+.car-shot{
+position:relative;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:40px;}
+nav a{margin-left:15px;font-size:14px;}
+section{padding:60px 5%;}
 </style>
 </head>
 
@@ -300,68 +211,123 @@ background:#000;
 
 <header>
 <div class="logo">IMAXCEL</div>
-
 <nav>
 <a href="#about">About</a>
-<a href="#lazor">Lazor</a>
+<a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>IMAXCEL</h1>
-<p>Innovating Beyond Limits</p>
-<button class="btn">Discover More</button>
+<h1>LAZOR Concept</h1>
+<p>Designed by Joshua N. Hapption • IMAXCEL Future Automotive</p>
+<a href="#gallery" class="btn">View My Design</a>
 </section>
 
 <section id="about">
-<h2>About IMAXCEL</h2>
-
+<h2>About LAZOR</h2>
 <div class="card">
 <p>
-IMAXCEL is a future innovation company founded by Joshua N.
-Our vision is to build world-class technology,
-automotive solutions and creative projects that inspire people globally.
+<b>LAZOR</b> is my original concept car design under <b>IMAXCEL Future Automotive</b>. 
+Every curve, line, and detail you see here was sketched and designed by me, Joshua N. Hapption.
+<br><br>
+This concept represents Speed • Power • Future. The "Z" logo on the wheels, "LAZOR" branding on the body, 
+and aggressive aerodynamic shape are all part of my vision for the next generation of electric hypercars.
+<br><br>
+<b>100% Original Artwork. Copyright IMAXCEL 2026.</b>
 </p>
 </div>
 </section>
 
-<section id="lazor">
-<h2>LAZOR</h2>
+<section id="gallery">
+<h2>LAZOR Concept Gallery</h2>
+<p style="text-align:center;color:#aaa;margin-bottom:30px">All designs and sketches by Joshua N. Hapption</p>
 
-<div class="card">
-<h3>Future Vehicle Brand</h3>
+<div class="gallery">
 
-<p>
-LAZOR is an automotive brand under IMAXCEL.
-Our mission is to create modern vehicles that combine
-performance, luxury and advanced technology.
-</p>
+<div class="car-shot card">
+<img src="car1.jpg" alt="LAZOR Top View">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<h3>LAZOR SP40 - Top View</h3>
+<p>Full top view showing aerodynamic roofline and LAZOR branding placement.</p>
+</div>
 
-<br>
+<div class="car-shot card">
+<img src="car2.jpg" alt="LAZOR Side View">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<h3>Side Profile Concept</h3>
+<p>Sleek side silhouette with sharp character lines and futuristic stance.</p>
+</div>
 
-<h3>Motto</h3>
-<p>Speed • Power • Future</p>
+<div class="car-shot card">
+<img src="car3.jpg" alt="LAZOR Front 3/4">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<h3>Front 3/4 Angle</h3>
+<p>Aggressive front fascia concept with sharp LED signature design.</p>
+</div>
+
+<div class="car-shot card">
+<img src="car4.jpg" alt="LAZOR Rear View">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<h3>Rear Design Concept</h3>
+<p>Wide rear stance with integrated spoiler and LAZOR badging concept.</p>
+</div>
+
+<div class="car-shot card">
+<img src="car5.jpg" alt="LAZOR Wheel Design">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<h3>Z-LOGO Wheels</h3>
+<p>Custom wheel design featuring the "Z" logo - signature of LAZOR brand.</p>
+</div>
+
+<div class="car-shot card">
+<img src="car6.jpg" alt="LAZOR Front Detail">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<h3>Front Detail Study</h3>
+<p>Close-up concept of front bumper, vents, and LAZOR lettering design.</p>
+</div>
+
+<div class="car-shot card">
+<img src="car7.jpg" alt="LAZOR Side Sketch">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<h3>Side Sketch Study</h3>
+<p>Hand sketch showing proportions and body line flow concept.</p>
+</div>
+
+<div class="car-shot card">
+<img src="car8.jpg" alt="LAZOR Rear Sketch">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<h3>Rear Sketch Study</h3>
+<p>Rear quarter concept sketch with spoiler and taillight design ideas.</p>
+</div>
+
+<div class="car-shot card">
+<img src="car9.jpg" alt="LAZOR Concept Art">
+<div class="watermark">IMAXCEL | LAZOR</div>
+<h3>Full Concept Art</h3>
+<p>Master concept sketch showing the complete LAZOR vision.</p>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:50px">
+<a href="mailto:imaxcelofficial@gmail.com?subject=LAZOR Concept Inquiry" class="btn">Inquire About LAZOR</a>
 </div>
 </section>
 
-<section class="contact" id="contact">
-<h2>Contact Us</h2>
-
-<form>
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Your Email">
-
-<textarea rows="5" placeholder="Your Message"></textarea>
-
-<button type="submit">Send Message</button>
-</form>
-
+<section id="contact" class="contact">
+<h2>Contact The Designer</h2>
+<div class="email-box">
+<h3>Joshua N. Hapption</h3>
+<p>Founder & Lead Designer - IMAXCEL Future Automotive</p>
+<a href="mailto:imaxcelofficial@gmail.com?subject=Business Inquiry - LAZOR" class="btn">imaxcelofficial@gmail.com</a>
+<p style="margin-top:20px;font-size:13px;color:#666">For licensing, partnerships, or design inquiries only</p>
+</div>
 </section>
 
 <footer>
-© 2026 IMAXCEL | All Rights Reserved
+© 2026/2035 IMAXCEL Future Automotive. LAZOR Concept by Joshua N. Hapption. All Rights Reserved.<br>
+All designs, sketches, and concepts are original artwork and intellectual property of IMAXCEL.
 </footer>
 
 </body>
