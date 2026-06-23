@@ -1,12 +1,9 @@
-
-
-</body>
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IMAXCEL | LAZOR</title>
+<title>IMAXCEL | LAZOR - Luxury Automotive</title>
 
 <style>
 *{
@@ -14,6 +11,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -23,26 +21,38 @@ color:white;
 
 header{
 background:#000;
-padding:20px;
+padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+border-bottom:1px solid #1e90ff33;
 }
 
 .logo{
 font-size:32px;
 font-weight:bold;
 color:#1e90ff;
+letter-spacing:2px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:30px;
+font-size:16px;
+transition:color 0.3s;
+}
+
+nav a:hover{
+color:#1e90ff;
 }
 
 .hero{
-height:90vh;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -52,29 +62,50 @@ background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
 url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
 background-size:cover;
 background-position:center;
+padding-top:80px;
 }
 
 .hero h1{
-font-size:60px;
+font-size:70px;
+margin-bottom:10px;
+text-shadow:0 0 30px #1e90ff66;
 }
 
 .hero p{
-font-size:22px;
+font-size:24px;
 margin-top:15px;
+color:#ccc;
 }
 
 .btn{
-margin-top:20px;
-padding:12px 25px;
-background:#1e90ff;
+margin-top:30px;
+padding:15px 35px;
+background:linear-gradient(90deg,#1e90ff,#0066cc);
 border:none;
 color:white;
 cursor:pointer;
 font-size:18px;
+font-weight:bold;
+border-radius:50px;
+transition:transform 0.3s, box-shadow 0.3s;
+text-decoration:none;
+display:inline-block;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px #1e90ff66;
 }
 
 section{
-padding:80px 10%;
+padding:100px 10%;
+}
+
+h2{
+font-size:45px;
+text-align:center;
+margin-bottom:50px;
+color:#1e90ff;
 }
 
 .card{
@@ -82,6 +113,81 @@ background:#151515;
 padding:25px;
 border-radius:12px;
 margin-top:20px;
+border:1px solid #222;
+}
+
+.car-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.car-card{
+background:#151515;
+border-radius:15px;
+overflow:hidden;
+border:1px solid #222;
+transition:transform 0.3s;
+}
+
+.car-card:hover{
+transform:scale(1.03);
+border:1px solid #1e90ff;
+}
+
+.car-img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.car-info{
+padding:25px;
+}
+
+.car-info h3{
+color:#1e90ff;
+font-size:24px;
+margin-bottom:10px;
+}
+
+.price{
+color:#ffd700;
+font-size:20px;
+font-weight:bold;
+margin:15px 0;
+}
+
+.specs{
+font-size:14px;
+color:#aaa;
+line-height:1.8;
+margin:15px 0;
+}
+
+.order-btn{
+width:100%;
+padding:12px;
+background:#D44638;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:8px;
+font-weight:bold;
+margin-top:10px;
+transition:background 0.3s;
+text-decoration:none;
+display:block;
+text-align:center;
+}
+
+.order-btn:hover{
+background:#B23121;
+}
+
+.sp40{
+border:2px solid #1e90ff;
 }
 
 .contact{
@@ -89,28 +195,27 @@ background:#111;
 text-align:center;
 }
 
-input,textarea{
-width:100%;
-padding:12px;
-margin-top:10px;
-background:#222;
-border:none;
-color:white;
+.email-box{
+background:#151515;
+padding:40px;
+border-radius:15px;
+border:1px solid #1e90ff;
+max-width:600px;
+margin:0 auto;
 }
 
-button{
-padding:12px 25px;
-background:#1e90ff;
-border:none;
-color:white;
-margin-top:15px;
-cursor:pointer;
+.email-box h3{
+color:#1e90ff;
+font-size:28px;
+margin-bottom:15px;
 }
 
 footer{
-padding:20px;
+padding:25px;
 text-align:center;
 background:#000;
+border-top:1px solid #1e90ff33;
+color:#777;
 }
 </style>
 </head>
@@ -119,10 +224,9 @@ background:#000;
 
 <header>
 <div class="logo">IMAXCEL</div>
-
 <nav>
 <a href="#about">About</a>
-<a href="#lazor">Lazor</a>
+<a href="#lazor">Cars</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
@@ -130,57 +234,114 @@ background:#000;
 <section class="hero">
 <h1>IMAXCEL</h1>
 <p>Innovating Beyond Limits</p>
-<button class="btn">Discover More</button>
+<button class="btn" onclick="document.getElementById('lazor').scrollIntoView()">Discover More</button>
 </section>
 
 <section id="about">
 <h2>About IMAXCEL</h2>
-
 <div class="card">
 <p>
-IMAXCEL is a future innovation company founded by Joshua N.Hapption
-Our vision is to build world-class technology,
-automotive solutions and creative projects that inspire people globally.
+IMAXCEL is a future innovation company founded by Joshua N.Hapption. 
+Our vision is to build world-class technology, automotive solutions and creative projects that inspire people globally.
 </p>
+<br>
+<p>We combine luxury, performance, and advanced technology to create vehicles worth billions. Every LAZOR car is engineered for Speed • Power • Future.</p>
 </div>
 </section>
 
 <section id="lazor">
-<h2>LAZOR</h2>
+<h2>LAZOR Vehicle Lineup</h2>
+<p style="text-align:center;color:#aaa;margin-bottom:20px">Built by IMAXCEL Luxury Companies</p>
 
-<div class="card">
-<h3>Future Vehicle Brand</h3>
+<div class="car-grid">
 
-<p>
-LAZOR is an automotive brand under IMAXCEL.
-Our mission is to create modern vehicles that combine
-performance, luxury and advanced technology.
-</p>
+<div class="car-card sp40" id="sp40">
+<img class="car-img" src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8" alt="SP40">
+<div class="car-info">
+<h3>LAZOR SP40</h3>
+<p style="color:#ffd700;font-size:14px">Flagship Concept • Worth $1 Billion</p>
+<p class="price">Price: On Request</p>
+<div class="specs">
+<b>Exterior:</b> Carbon fiber body, Laser LED headlights, Gull-wing doors<br>
+<b>Interior:</b> Hand-stitched Italian leather, 8K holographic dashboard, AI co-pilot<br>
+<b>Performance:</b> 0-100km/h in 1.8s, 1200HP electric motor, 800km range
+</div>
+<a class="order-btn" href="mailto:imaxcelofficial@gmail.com?subject=Order Request: LAZOR SP40 VIP&body=Hello IMAXCEL Team,%0D%0A%0D%0AI am interested in ordering the LAZOR SP40 VIP Flagship Concept.%0D%0A%0D%0AName: %0D%0APhone: %0D%0ACountry: %0D%0A%0D%0APlease send me VIP details and pricing.">Order SP40 via Email</a>
+</div>
+</div>
 
-<br>
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1542362567-b07e54358753" alt="X7 SUV">
+<div class="car-info">
+<h3>LAZOR X7 SUV</h3>
+<p class="price">From $180,000</p>
+<div class="specs">
+<b>Type:</b> Luxury Electric SUV • 7 Seats<br>
+<b>Range:</b> 650km • 600HP AWD<br>
+<b>Features:</b> Panoramic roof, Night vision
+</div>
+<a class="order-btn" href="mailto:imaxcelofficial@gmail.com?subject=Order Request: LAZOR X7 SUV&body=Hello IMAXCEL Team,%0D%0A%0D%0AI want to order the LAZOR X7 SUV.%0D%0A%0D%0AName: %0D%0APhone: %0D%0ACountry: ">Order X7 via Email</a>
+</div>
+</div>
 
-<h3>Motto</h3>
-<p>Speed • Power • Future</p>
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" alt="S1 Sedan">
+<div class="car-info">
+<h3>LAZOR S1 Sedan</h3>
+<p class="price">From $120,000</p>
+<div class="specs">
+<b>Type:</b> Executive Electric Sedan<br>
+<b>Range:</b> 700km • 500HP<br>
+<b>Features:</b> Massage seats, Starlight ceiling
+</div>
+<a class="order-btn" href="mailto:imaxcelofficial@gmail.com?subject=Order Request: LAZOR S1 Sedan&body=Hello IMAXCEL Team,%0D%0A%0D%0AI want to order the LAZOR S1 Sedan.%0D%0A%0D%0AName: %0D%0APhone: %0D%0ACountry: ">Order S1 via Email</a>
+</div>
+</div>
+
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7" alt="T-Rex">
+<div class="car-info">
+<h3>LAZOR T-Rex Off-Road</h3>
+<p class="price">From $220,000</p>
+<div class="specs">
+<b>Type:</b> Electric Off-Road Beast<br>
+<b>Power:</b> 1000HP • 4x4 Tank Mode<br>
+<b>Features:</b> 1m water wading, Military armor
+</div>
+<a class="order-btn" href="mailto:imaxcelofficial@gmail.com?subject=Order Request: LAZOR T-Rex&body=Hello IMAXCEL Team,%0D%0A%0D%0AI want to order the LAZOR T-Rex Off-Road.%0D%0A%0D%0AName: %0D%0APhone: %0D%0ACountry: ">Order T-Rex via Email</a>
+</div>
+</div>
+
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1618843477313-d8fe217a6d57" alt="Z3">
+<div class="car-info">
+<h3>LAZOR Z3 Hatchback</h3>
+<p class="price">From $85,000</p>
+<div class="specs">
+<b>Type:</b> Compact Luxury Hatchback<br>
+<b>Range:</b> 500km • 350HP<br>
+<b>Features:</b> Drone docking, AR windshield
+</div>
+<a class="order-btn" href="mailto:imaxcelofficial@gmail.com?subject=Order Request: LAZOR Z3&body=Hello IMAXCEL Team,%0D%0A%0D%0AI want to order the LAZOR Z3 Hatchback.%0D%0A%0D%0AName: %0D%0APhone: %0D%0ACountry: ">Order Z3 via Email</a>
+</div>
+</div>
+
 </div>
 </section>
 
 <section class="contact" id="contact">
-<h2>Contact Us</h2>
-
-<form>
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Your Email">
-
-<textarea rows="5" placeholder="Your Message"></textarea>
-
-<button type="submit">Send Message</button>
-</form>
-
+<h2>Contact IMAXCEL</h2>
+<div class="email-box">
+<h3>Email Us Directly</h3>
+<p style="color:#aaa;margin-bottom:25px">Send your inquiry to Joshua N.Hapption and the IMAXCEL team</p>
+<a class="btn" href="mailto:imaxcelofficial@gmail.com?subject=General Inquiry - IMAXCEL LAZOR&body=Hello Joshua,%0D%0A%0D%0AMy name is:%0D%0AMy inquiry is:">imaxcelofficial@gmail.com</a>
+<p style="margin-top:20px;font-size:14px;color:#666">Click the button above. Your Gmail/Email app will open automatically</p>
+</div>
 </section>
 
 <footer>
-© 2026/2035 IMAXCEL | All Rights Reserved
+© 2026/2035 IMAXCEL | LAZOR Luxury Automotive | Founded by Joshua N.Hapption<br>
+Lagos, Nigeria | Contact: imaxcelofficial@gmail.com | All Rights Reserved
 </footer>
 
 </body>
